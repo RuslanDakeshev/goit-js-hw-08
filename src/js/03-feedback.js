@@ -124,6 +124,7 @@ function onTextAreaInput(event) {
 
 function populateTextarea() {
   const saveMessage = JSON.parse(localStorage.getItem('feedback-form-state'));
+  console.log(saveMessage);
 
   if (saveMessage) {
     console.log(saveMessage);
