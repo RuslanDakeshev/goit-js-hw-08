@@ -32,11 +32,11 @@ populateFormData();
 function onFormSubmit(event) {
   event.preventDefault();
   if (!formData[input.name] || !formData[textArea.name]) {
-    alert('Все поля формы должны быть заполнены')
+    alert('Все поля формы должны быть заполнены');
   } else {
     console.log(formData);
   }
-  
+
   console.log('Отправка формы');
 
   event.currentTarget.reset();
@@ -53,17 +53,17 @@ function onFormSubmit(event) {
   formData[textArea.name] = '';
 }
 
-  function onFormDataInput(event) {
-    formData[event.target.name] = event.target.value;
+function onFormDataInput(event) {
+  formData[event.target.name] = event.target.value;
 
-    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-  }
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+}
 
-  // function onTextAreaInputEmail(event) {
-  //   const message = event.target.value;
+// function onTextAreaInputEmail(event) {
+//   const message = event.target.value;
 
-  //   localStorage.setItem(STORAGE_EMAIL, message);
-  // }
+//   localStorage.setItem(STORAGE_EMAIL, message);
+// }
 
 function populateFormData() {
   const saveMessage = localStorage.getItem('feedback-form-state');
@@ -147,12 +147,6 @@ function populateFormData() {
 //   textArea.value = saveMessage;
 //   inputEmail.value = saveEmail;
 // }
-
-
-
-
-
-
 
 // import throttle from 'lodash.throttle';
 
